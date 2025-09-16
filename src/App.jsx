@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./components/landing";
 import Login from "./components/login";
 import Signup from "./components/Signup";
-import Home from "./components/home"; // ✅ Capitalized
+import Home from "./components/Home"; // Capitalized
+import Discover from "./components/Discover"; // Importing Discover
+import AIScanner from "./components/Aiscanner"; 
+import MarketPlace from "./components/MarketpPlace"; 
 
 function App() {
   return (
@@ -13,8 +16,11 @@ function App() {
           {/* Landing page will only render at "/" */}
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/home" element={<Home />} /> 
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Discover" element={<Discover />} /> 
+          <Route path="/AIScanner" element={<AIScanner />} />
+          <Route path="/MarketPlace" element={<MarketPlace />} />
         </Routes>
       </main>
     </Router>

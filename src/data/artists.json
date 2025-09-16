@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Rajesh Sharma",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "Meera Devi",
+    "verified": false
+  }
+]

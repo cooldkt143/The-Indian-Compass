@@ -41,7 +41,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-gradient-to-r from-yellow-200 via-orange-400 to-yellow-200 overflow-hidden">
+    <div className="relative w-full h-screen bg-gradient-to-r from-yellow-100 via-orange-100 to-yellow-100 overflow-hidden">
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center filter brightness-75 mix-blend-multiply"

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Rajasthani Painting",
+    "description": "Handmade miniature painting from Jaipur.",
+    "price": 2500,
+    "category": "paintings",
+    "state": "Rajasthan",
+    "images": ["/images/painting1.jpg"],
+    "rating": 4.5,
+    "total_reviews": 120,
+    "artist_id": 1,
+    "badges": ["authentic", "handmade"],
+    "shipping_time": "5-7 days"
+  },
+  {
+    "id": 2,
+    "name": "Terracotta Pot",
+    "description": "Clay pot made by rural artisans.",
+    "price": 800,
+    "category": "pottery",
+    "state": "West Bengal",
+    "images": ["/images/pot.jpg"],
+    "rating": 4.2,
+    "total_reviews": 85,
+    "artist_id": 2,
+    "badges": ["eco_friendly", "bestseller"],
+    "shipping_time": "3-5 days"
+  }
+]
