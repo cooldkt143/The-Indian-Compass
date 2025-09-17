@@ -5,7 +5,7 @@ import mobileViewBg from "../image/bg_home_mobile.jpg";
 
 // Importing sections
 import Main from "../section/main";
-import SectionTwo from "../section/SectionTwo";
+import SectionMap from "../section/sectionmap";
 
 function Home() {
   const [bgImage, setBgImage] = useState(bgHome);
@@ -27,7 +27,7 @@ function Home() {
     <div className="w-full">
       <Header />
       <Main bgImage={bgImage} />
-      <SectionTwo bgImage={bgImage} />
+      <SectionMap bgImage={bgImage}/>
     </div>
   );
 }

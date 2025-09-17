@@ -7,6 +7,7 @@ import Home from "./components/Home"; // Capitalized
 import Discover from "./components/Discover"; // Importing Discover
 import AIScanner from "./components/Aiscanner"; 
 import MarketPlace from "./components/MarketpPlace"; 
+import Map from "./components/map";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Discover" element={<Discover />} /> 
           <Route path="/AIScanner" element={<AIScanner />} />
           <Route path="/MarketPlace" element={<MarketPlace />} />
+          <Route path="/map" element={<Map />} />
         </Routes>
       </main>
     </Router>
