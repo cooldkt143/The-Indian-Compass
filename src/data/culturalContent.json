@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Taj Mahal",
+    "description": "A symbol of eternal love built in white marble.",
+    "category": "monument",
+    "state": "Uttar Pradesh",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg",
+    "historical_period": "Mughal Era",
+    "significance": "UNESCO World Heritage Site",
+    "tags": ["architecture", "history", "marble"]
+  },
+  {
+    "id": 2,
+    "title": "Kathak Dance",
+    "description": "A classical dance form from Northern India.",
+    "category": "music",
+    "state": "Uttar Pradesh",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Kathak_dancer.jpg",
+    "tags": ["dance", "art", "tradition"]
+  },
+  {
+    "id": 3,
+    "title": "Onam Festival",
+    "description": "Harvest festival of Kerala with boat races and floral designs.",
+    "category": "festival",
+    "state": "Kerala",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Onam_Pookalam.jpg",
+    "tags": ["festival", "kerala", "celebration"]
+  }
+  
+]

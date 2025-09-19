@@ -73,7 +73,7 @@ const Header = ({ onProfileClick }) => {
 
             {/* Profile (Right End) */}
             <button
-              onClick={onProfileClick}
+              onClick={() => navigate("/profile")}
               className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#e67530] text-white text-lg transition shadow-md hover:brightness-110"
             >
               <User className="w-6 h-6" />
@@ -109,7 +109,7 @@ const Header = ({ onProfileClick }) => {
           {/* Profile (mobile only) */}
           <div className="flex items-center">
             <button
-              onClick={onProfileClick}
+              onClick={() => navigate("/profile")}
               className="relative translate-y-1/2 bg-orange-400/80 text-[#2c0d01] hover:bg-orange-600 hover:text-white rounded-2xl p-3 transition shadow-md"
             >
               <User className="w-6 h-6" />

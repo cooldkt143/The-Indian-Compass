@@ -9,6 +9,7 @@ import AIScanner from "./components/Aiscanner";
 import MarketPlace from "./components/MarketpPlace"; 
 import Map from "./components/map";
 import About from "./components/About";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/MarketPlace" element={<MarketPlace />} />
           <Route path="/map" element={<Map />} />
           <Route path="/about" element={<About />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>
     </Router>
