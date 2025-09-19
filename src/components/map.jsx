@@ -75,7 +75,7 @@ const Map = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col pt-10 pl-2 pr-2"
+      className="min-h-screen flex flex-col pt-5 pl-2 pr-2"
       style={{
         backgroundImage: `url(${bgMap})`,
         backgroundSize: "cover",
@@ -111,7 +111,7 @@ const Map = () => {
             transition={{ duration: 1 }}
           >
             <motion.h1
-              className="text-3xl md:text-5xl font-bold text-gray-900 mb-3 pt-2"
+              className="text-3xl md:text-5xl font-bold text-gray-900 mb-3 pt-0"
               whileHover={{ scale: 1.05 }}
             >
               Interactive Cultural Map
@@ -128,7 +128,7 @@ const Map = () => {
 
           {/* Filters */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 mb-8 bg-white/70 backdrop-blur-md rounded-lg p-4"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 mb-5 bg-white/70 backdrop-blur-md rounded-lg p-3"
             initial="hidden"
             animate="visible"
             variants={{

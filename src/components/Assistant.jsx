@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ChatbotIcon from "../ui/ChatbotIcon";
 import ChatForm from "../ui/ChatForm";
 import ChatMessage from "../ui/ChatMessage";
-import chatBg from "../image/chat_bg.png";
+import chatBg from "../image/bg_chat_bot.jpg";
 import Header from "../ui/header";
 
 export const Assistant = () => {
@@ -100,7 +100,7 @@ export const Assistant = () => {
                 <div className="w-8 h-8 md:w-9 md:h-9 p-1.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
                   <ChatbotIcon />
                 </div>
-                <h2 className="text-base md:text-lg font-semibold">AI-Assistant</h2>
+                <h2 className="text-base text-[#6d2b2b] md:text-lg font-semibold">AI-Assistant</h2>
               </div>
               <motion.span
                 whileTap={{ scale: 0.8, rotate: 90 }}
