@@ -6,6 +6,7 @@ import mobileViewBg from "../image/bg_home_mobile.jpg";
 // Importing sections
 import Main from "../section/main";
 import SectionMap from "../section/sectionmap";
+import SectionAIScanner from "../section/AIScannerSection";
 
 function Home() {
   const [bgImage, setBgImage] = useState(bgHome);
@@ -28,6 +29,7 @@ function Home() {
       <Header />
       <Main bgImage={bgImage} />
       <SectionMap bgImage={bgImage}/>
+      <SectionAIScanner bgImage={bgImage}/>
     </div>
   );
 }

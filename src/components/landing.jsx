@@ -75,7 +75,7 @@ const Landing = () => {
           Your Cultural and Spiritual Guide to India
         </h2>
 
-        <p className="max-w-lg sm:max-w-2xl mt-4 sm:mt-6 text-orange-100 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed opacity-0 animate-fade-in-delayed px-2">
+        <p className="max-w sm:max-w-4xl mt-4 sm:mt-6 text-[#471b02] text-sm sm:text-base md:text-lg lg:text-2xl leading-relaxed opacity-0 animate-fade-in-delayed px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg font-bold">
           India’s culture and heritage are a vibrant tapestry woven with traditions,
           festivals, art, music, and philosophy that span thousands of years. From the
           grandeur of ancient temples and monuments to the simplicity of folk art and

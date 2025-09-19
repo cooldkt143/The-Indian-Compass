@@ -8,6 +8,7 @@ import Discover from "./components/Discover"; // Importing Discover
 import AIScanner from "./components/Aiscanner"; 
 import MarketPlace from "./components/MarketpPlace"; 
 import Map from "./components/map";
+import About from "./components/About";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/AIScanner" element={<AIScanner />} />
           <Route path="/MarketPlace" element={<MarketPlace />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
     </Router>

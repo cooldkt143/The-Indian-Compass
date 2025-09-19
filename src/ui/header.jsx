@@ -30,12 +30,12 @@ const Header = ({ onProfileClick }) => {
       <header className="hidden md:flex fixed top-0 left-0 w-full z-50">
         <div className="w-full bg-white/10 backdrop-blur-sm py-4 shadow-lg">
           <motion.div
-            className="max-w-7xl mx-auto flex items-center justify-between px-6"
+            className="w-full flex items-center justify-between pl-20 pr-20"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            {/* Logo + Title */}
+            {/* Logo + Title (Left End) */}
             <div
               className="flex items-center gap-3 cursor-pointer"
               onClick={() => navigate("/")}
@@ -45,13 +45,13 @@ const Header = ({ onProfileClick }) => {
                 alt="logo"
                 className="w-12 h-12 rounded-full object-cover shadow-md bg-white/70 p-1"
               />
-              <h1 className="text-2xl font-bold tracking-wide text-[#ad4146]">
+              <h1 className="text-2xl font-bold tracking-wide text-white px-4 py-2 rounded-2xl shadow-md backdrop-blur-md bg-gradient-to-r from-[#e67530] via-[#ad4146] to-[#e67530]">
                 The Indian Compass
               </h1>
             </div>
 
-            {/* Nav Items */}
-            <nav className="flex items-center gap-4 lg:gap-6">
+            {/* Nav Items (Center) */}
+            <nav className="flex items-center gap-4 lg:gap-6 mx-auto">
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 return (
@@ -69,15 +69,16 @@ const Header = ({ onProfileClick }) => {
                   </button>
                 );
               })}
-
-              <button
-                onClick={onProfileClick}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/30 backdrop-blur-md text-[#ad4146] hover:bg-[#e67530] hover:text-white transition"
-              >
-                <User className="w-6 h-6" />
-                <span className="hidden lg:inline font-medium">Profile</span>
-              </button>
             </nav>
+
+            {/* Profile (Right End) */}
+            <button
+              onClick={onProfileClick}
+              className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#e67530] text-white text-lg transition shadow-md hover:brightness-110"
+            >
+              <User className="w-6 h-6" />
+              <span className="hidden lg:inline font-medium">Profile</span>
+            </button>
           </motion.div>
         </div>
       </header>
