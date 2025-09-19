@@ -5,7 +5,7 @@
     "description": "A symbol of eternal love built in white marble.",
     "category": "monument",
     "state": "Uttar Pradesh",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg",
+    "image_url": "./src/image/discoverPage/Tajmahal.jpg",
     "historical_period": "Mughal Era",
     "significance": "UNESCO World Heritage Site",
     "tags": ["architecture", "history", "marble"]
@@ -16,7 +16,7 @@
     "description": "A classical dance form from Northern India.",
     "category": "music",
     "state": "Uttar Pradesh",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Kathak_dancer.jpg",
+    "image_url": "./src/image/discoverPage/kathak_dance.jpg",
     "tags": ["dance", "art", "tradition"]
   },
   {
@@ -25,8 +25,7 @@
     "description": "Harvest festival of Kerala with boat races and floral designs.",
     "category": "festival",
     "state": "Kerala",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Onam_Pookalam.jpg",
+    "image_url": "./src/image/discoverPage/onam_festival.jpg",
     "tags": ["festival", "kerala", "celebration"]
   }
-  
 ]
