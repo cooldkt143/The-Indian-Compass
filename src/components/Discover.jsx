@@ -5,10 +5,7 @@ import { Search, Filter, Crown, Palette, Music, ChefHat, Calendar } from "lucide
 
 // UI Imports
 import Topbar from "../ui/header";
-import Trending from "../ui/Trending";
-//import Discoverbg from "../image/Discoverbg.jpg";
-
-// Component Imports
+import Trending from "../ui/Trending"; // ✅ Now imported
 import CategoryCard from "../ui/CategoryCard";
 import ContentCard from "../ui/ContentCard";
 import DiscoverSearchFilter from "../ui/DiscoverSearchFilter";
@@ -88,8 +85,7 @@ function Discover({ activePage, setActivePage }) {
   };
 
   return (
-    <div
-      className="w-full min-h-screen bg-gray-50 bg-cover bg-center">
+    <div className="w-full min-h-screen bg-gray-50 bg-cover bg-center pt-5">
       {/* Topbar */}
       <Topbar active={activePage} onNavigate={setActivePage} />
 

@@ -1,46 +1,46 @@
 [
   {
     "id": 1,
-    "title": "Folk Dance Festival in Rajasthan",
-    "author": "Ananya Sharma",
-    "location": "Jaipur, Rajasthan",
-    "image": "https://source.unsplash.com/400x300/?rajasthan,dance",
+    "title": "Khadi Mahotsav Celebrates Swadeshi Spirit in Varanasi",
+    "author": "Arjun Desai",
+    "location": "Varanasi, Uttar Pradesh",
+    "image": "./src/image/trending/khadiMhotsav.jpeg",
     "category": "Festival",
-    "views": 1200,
-    "likes": 340,
-    "time": "2 hours ago"
+    "views": 2500,
+    "likes": 900,
+    "time": "Today"
   },
   {
     "id": 2,
-    "title": "Traditional Handicrafts Market",
-    "author": "Ravi Kumar",
-    "location": "Kutch, Gujarat",
-    "image": "https://source.unsplash.com/400x300/?handicraft,india",
-    "category": "Art & Craft",
-    "views": 950,
-    "likes": 220,
-    "time": "5 hours ago"
+    "title": "Durga Puja Pandals in Kolkata Set to Dazzle with Unique Themes",
+    "author": "Priya Menon",
+    "location": "Kolkata, West Bengal",
+    "image": "./src/image/trending/durgapuja.webp",
+    "category": "Heritage & Art",
+    "views": 2100,
+    "likes": 780,
+    "time": "Today"
   },
   {
     "id": 3,
-    "title": "Ayurveda Wellness Retreat",
-    "author": "Meera Patel",
-    "location": "Kerala, India",
-    "image": "https://source.unsplash.com/400x300/?kerala,wellness",
-    "category": "Health",
-    "views": 800,
-    "likes": 180,
-    "time": "1 day ago"
+    "title": "Sammohan 2025: Empowering Artists with Disabilities",
+    "author": "Tarun Iyer",
+    "location": "Thiruvananthapuram, Kerala",
+    "image": "./src/image/trending/sammohan.jpeg",
+    "category": "Culture / Inclusion",
+    "views": 1800,
+    "likes": 610,
+    "time": "Today"
   },
   {
     "id": 4,
-    "title": "Temple Architecture Tour",
-    "author": "Sandeep Verma",
-    "location": "Hampi, Karnataka",
-    "image": "https://source.unsplash.com/400x300/?temple,india",
-    "category": "Heritage",
-    "views": 600,
-    "likes": 150,
-    "time": "2 days ago"
+    "title": "Royal Dasara Festival of Kolhapur Now Major State Event",
+    "author": "Neha Reddy",
+    "location": "Kolhapur, Maharashtra",
+    "image": "https://source.unsplash.com/400x300/?dasara,kolhapur",
+    "category": "Festival & Heritage",
+    "views": 2200,
+    "likes": 850,
+    "time": "Today"
   }
 ]
