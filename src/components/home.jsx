@@ -8,6 +8,8 @@ import Main from "../section/main";
 import SectionMap from "../section/sectionmap";
 import SectionAIScanner from "../section/AIScannerSection";
 
+import Assitant from "../components/Assistant";
+
 function Home() {
   const [bgImage, setBgImage] = useState(bgHome);
 
@@ -30,6 +32,7 @@ function Home() {
       <Main bgImage={bgImage} />
       <SectionMap bgImage={bgImage}/>
       <SectionAIScanner bgImage={bgImage}/>
+      <Assitant bgImage={bgImage}/>
     </div>
   );
 }

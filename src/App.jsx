@@ -10,6 +10,7 @@ import MarketPlace from "./components/MarketpPlace";
 import Map from "./components/map";
 import About from "./components/About";
 import Profile from "./components/Profile";
+import Assistant from "./components/Assistant";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/map" element={<Map />} />
           <Route path="/about" element={<About />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/assistant" element={<Assistant />} />
         </Routes>
       </main>
     </Router>
