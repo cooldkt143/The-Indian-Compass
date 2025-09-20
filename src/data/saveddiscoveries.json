@@ -1,0 +1,46 @@
+[
+  {
+    "id": 2,
+    "identified_item": "Tawang Monastery",
+    "image_url": "https://images.unsplash.com/photo-1617196031778-158f6b7f5a5c?w=400",
+    "state_of_origin": "Arunachal Pradesh",
+    "category": "monument",
+    "historical_period": "17th century",
+    "confidence_score": 95,
+    "saved_date": "2025-09-21T09:45:00Z",
+    "description": "One of the largest monasteries in India, tucked in the hills of Arunachal Pradesh, showcasing Tibetan culture."
+  },
+  {
+    "id": 3,
+    "identified_item": "Chopda Artisans Village",
+    "image_url": "https://images.unsplash.com/photo-1597303953460-3a37f1a6d9d8?w=400",
+    "state_of_origin": "Gujarat",
+    "category": "art",
+    "historical_period": "Modern",
+    "confidence_score": 90,
+    "saved_date": "2025-09-21T14:20:00Z",
+    "description": "Village in Gujarat where artisans create exquisite hand-embroidered textiles, preserving traditional art forms."
+  },
+  {
+    "id": 4,
+    "identified_item": "Mawlynnong Village",
+    "image_url": "https://images.unsplash.com/photo-1582208705534-6d788b42f8da?w=400",
+    "state_of_origin": "Meghalaya",
+    "category": "festival",
+    "historical_period": "Modern",
+    "confidence_score": 87,
+    "saved_date": "2025-09-22T10:15:00Z",
+    "description": "India's cleanest village, known for community living and eco-friendly culture, hosting small local festivals."
+  },
+  {
+    "id": 5,
+    "identified_item": "Ziro Valley Music Festival",
+    "image_url": "https://images.unsplash.com/photo-1561484934-032ac8b9a2d4?w=400",
+    "state_of_origin": "Arunachal Pradesh",
+    "category": "music",
+    "historical_period": "Modern",
+    "confidence_score": 89,
+    "saved_date": "2025-09-22T16:00:00Z",
+    "description": "Hidden music festival in the scenic Ziro Valley, featuring indie and folk music amidst pine forests."
+  }
+]

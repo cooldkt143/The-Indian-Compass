@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Topbar from "../ui/header";
 import ProfileHeader from "../ui/ProfileHeader";
 import BadgeCarousel from "../ui/BadgeCarousel";
 import StoriesGrid from "../ui/StoriesGrid";
 import SavedDiscoveries from "../ui/SavedDiscoveries";
-import SettingsPanel from "../ui/SettingsPanel";
-import { 
-  User as UserIcon, Award, Image, Bookmark, Settings
+import {
+  User as UserIcon,
+  Award,
+  Image,
+  Bookmark,
 } from "lucide-react";
 
-// ---- Simple Tabs Implementation ----
+// ---- Tabs Implementation ----
 const Tabs = ({ value, onValueChange, children }) => {
   const [active, setActive] = useState(value);
   const handleChange = (val) => {
@@ -17,7 +20,6 @@ const Tabs = ({ value, onValueChange, children }) => {
     onValueChange(val);
   };
 
-  // Separate TabsList and TabsContent
   const tabsList = React.Children.toArray(children).filter(
     (child) => child.type.displayName === "TabsList"
   );
@@ -27,7 +29,9 @@ const Tabs = ({ value, onValueChange, children }) => {
 
   return (
     <div>
-      {tabsList.map((child) => React.cloneElement(child, { active, onChange: handleChange }))}
+      {tabsList.map((child) =>
+        React.cloneElement(child, { active, onChange: handleChange })
+      )}
       {tabsContent.map((child) =>
         child.props.value === active ? child : null
       )}
@@ -49,8 +53,8 @@ const TabsTrigger = ({ value, children, active, onChange, className }) => {
   return (
     <button
       onClick={() => onChange(value)}
-      className={`flex items-center space-x-2 px-3 py-2 w-full justify-center 
-        ${isActive ? "bg-orange-100 text-orange-700" : "text-gray-600"} 
+      className={`flex items-center space-x-2 px-3 py-2 w-full justify-center transition-colors duration-200
+        ${isActive ? "bg-orange-100 text-orange-700 shadow-sm" : "text-gray-600 hover:text-orange-600"} 
         ${className}`}
     >
       {children}
@@ -60,7 +64,14 @@ const TabsTrigger = ({ value, children, active, onChange, className }) => {
 TabsTrigger.displayName = "TabsTrigger";
 
 const TabsContent = ({ children }) => (
-  <div className="mt-6">{children}</div>
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.3 }}
+    className="mt-6"
+  >
+    {children}
+  </motion.div>
 );
 TabsContent.displayName = "TabsContent";
 
@@ -73,6 +84,7 @@ function Profile() {
   const [savedDiscoveries, setSavedDiscoveries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("overview");
+  const [activePage, setActivePage] = useState("profile");
 
   useEffect(() => {
     loadData();
@@ -84,7 +96,6 @@ function Profile() {
       const userData = await import("../data/user.json");
       const progressData = await import("../data/progress.json");
       const storiesData = await import("../data/stories.json");
-      const badgesData = await import("../data/badges.json");
       const discoveriesData = await import("../data/discoveries.json");
 
       setUser(userData.default);
@@ -104,29 +115,46 @@ function Profile() {
   const handleDeleteStory = (id) =>
     setUserStories((prev) => prev.filter((s) => s.id !== id));
 
-  const handleUpdateSettings = (settings) =>
-    alert("Settings updated: " + JSON.stringify(settings));
-
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50 flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-blue-50 py-8">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <ProfileHeader
-          user={user}
-          userProgress={userProgress}
-          onEdit={() => setActiveTab("settings")}
-        />
+    <div className="min-h-screen bg-gradient-to-br from-[#FDEBD0] to-[#F6D0A9]">
+      {/* Topbar */}
+      <div className="fixed top-0 left-0 w-full z-50">
+        <Topbar active={activePage} onNavigate={setActivePage} />
+      </div>
 
-        <div className="mt-8">
+      {/* Main content with padding to avoid overlap */}
+      <div className="pt-20 px-4 sm:px-6 pb-8">
+        {/* Profile Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-white rounded-2xl shadow-md overflow-hidden"
+        >
+          <ProfileHeader
+            user={user}
+            userProgress={userProgress}
+            onEdit={() => setActiveTab("settings")}
+          />
+        </motion.div>
+
+        {/* Tabs Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-8 bg-white rounded-2xl shadow-md p-4 sm:p-6"
+        >
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-5 bg-white shadow-sm">
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 bg-gray-50 rounded-xl overflow-hidden shadow-sm">
               <TabsTrigger value="overview">
                 <UserIcon className="w-4 h-4" />
                 <span className="hidden sm:inline">Overview</span>
@@ -143,12 +171,9 @@ function Profile() {
                 <Bookmark className="w-4 h-4" />
                 <span className="hidden sm:inline">Saved Discoveries</span>
               </TabsTrigger>
-              <TabsTrigger value="settings">
-                <Settings className="w-4 h-4" />
-                <span className="hidden sm:inline">Settings</span>
-              </TabsTrigger>
             </TabsList>
 
+            {/* Overview */}
             <TabsContent value="overview">
               <div className="space-y-8">
                 <BadgeCarousel badges={userBadges} />
@@ -164,6 +189,7 @@ function Profile() {
               </div>
             </TabsContent>
 
+            {/* Stories */}
             <TabsContent value="stories">
               <StoriesGrid
                 stories={userStories}
@@ -173,19 +199,17 @@ function Profile() {
               />
             </TabsContent>
 
+            {/* Badges */}
             <TabsContent value="badges">
               <BadgeCarousel badges={userBadges} />
             </TabsContent>
 
+            {/* Discoveries */}
             <TabsContent value="discoveries">
               <SavedDiscoveries discoveries={savedDiscoveries} />
             </TabsContent>
-
-            <TabsContent value="settings">
-              <SettingsPanel user={user} onUpdateSettings={handleUpdateSettings} />
-            </TabsContent>
           </Tabs>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
